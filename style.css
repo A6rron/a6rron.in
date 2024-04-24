@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+}
+
+header {
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center content */
+}
+
+nav {
+    display: flex;
+    gap: 10px; /* Add space between links */
+}
+
+a {
+    color: #ccc; /* Light gray text color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+a {
+    color: inherit; /* Inherit text color from body */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.about {
+    margin-top: 20px; /* Add space between sections */
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    
+    font-family: monospace;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+ul {
+    font-family: monospace;
+    padding-left: 20px;
+}
