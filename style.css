@@ -15,11 +15,11 @@ header {
 
 nav {
     display: flex;
-    gap: 20px; /* Add space between links */
+    gap: 10px; /* Add space between links */
 }
 
 a {
-    color: #ccc; /* Light gray text color */
+    color: #9d9d9d; /* Light gray text color */
     text-decoration: none; /* Remove underline */
 }
 
