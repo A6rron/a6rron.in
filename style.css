@@ -34,6 +34,7 @@ a {
 }
 
 a:hover {
+    color: lightgray; 
     text-decoration: underline; /* Underline on hover */
 }
 
