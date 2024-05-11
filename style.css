@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover */
+    color: rgb(98, 95, 95);  
 }
 
 
@@ -33,8 +33,8 @@ a {
     text-decoration: none; /* Remove underline */
 }
 
-a:hover {
-    color: lightgray; 
+.socials:hover {
+    color: rgb(98, 95, 95); 
     text-decoration: none; 
 }
 
