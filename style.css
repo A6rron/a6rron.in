@@ -1,61 +1,77 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #000000;
-    color: white;
+@import "https://unpkg.com/open-props/easings.min.css";
+
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center;
 }
 
-header {
-    font-family: monospace;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Vertically center content */
+.sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill);
 }
 
-nav {
-    display: flex;
-    gap: 10px; /* Add space between links */
+.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill-hover);
 }
 
-a {
-    color: #c0bebe; /* Light gray text color */
-    text-decoration: none; /* Remove underline */
+.sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
 }
 
-a:hover {
-    color: rgb(165, 164, 164);  
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill-hover);
 }
 
-
-a {
-    color: inherit; /* Inherit text color from body */
-    text-decoration: none; /* Remove underline */
+[data-theme="dark"] .sun-and-moon > .sun {
+  transform: scale(1.75);
 }
 
-.socials:hover {
-    color: rgb(177, 172, 172); 
-    text-decoration: none; 
+[data-theme="dark"] .sun-and-moon > .sun-beams {
+  opacity: 0;
 }
 
-.about {
-    margin-top: 20px; /* Add space between sections */
+[data-theme="dark"] .sun-and-moon > .moon > circle {
+  transform: translateX(-7px);
 }
 
-h1 {
-    font-family: monospace;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+@supports (cx: 1) {
+  [data-theme="dark"] .sun-and-moon > .moon > circle {
+    cx: 17;
+    transform: translateX(0);
+  }
 }
 
-h2 {
-    
-    font-family: monospace;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon > .sun {
+    transition: transform .5s var(--ease-elastic-3);
+  }
 
-ul {
-    font-family: monospace;
-    padding-left: 20px;
+  .sun-and-moon > .sun-beams {
+    transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
+  }
+
+  .sun-and-moon .moon > circle {
+    transition: transform .25s var(--ease-out-5);
+  }
+
+  @supports (cx: 1) {
+    .sun-and-moon .moon > circle {
+      transition: cx .25s var(--ease-out-5);
+    }
+  }
+
+  [data-theme="dark"] .sun-and-moon > .sun {
+    transition-timing-function: var(--ease-3);
+    transition-duration: .25s;
+    transform: scale(1.75);
+  }
+
+  [data-theme="dark"] .sun-and-moon > .sun-beams {
+    transition-duration: .15s;
+    transform: rotateZ(-25deg);
+  }
+
+  [data-theme="dark"] .sun-and-moon > .moon > circle {
+    transition-duration: .5s;
+    transition-delay: .25s;
+  }
 }
