@@ -1,77 +1,49 @@
-@import "https://unpkg.com/open-props/easings.min.css";
-
-.sun-and-moon > :is(.moon, .sun, .sun-beams) {
-  transform-origin: center;
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+li::before {
+    content: "\2013"; /* Use en dash (–) as bullet points */
+    margin-right: 0.5em; /* Add some space between the en dash and the text */
+}
+body {
+    margin: 5% auto;
+    background: #f2f2f2;
+    color: #000000;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 73%;
+    transition: background-color 0.3s, color 0.3s;
+}
+code { background: white; }
+a {
+    border-bottom: 1px solid #444444;
+    color: #444444;
+    text-decoration: none;
+}
+a:hover { border-bottom: 0; }
+.dark-mode {
+    background: #000000;
+    color: #e0e0e0;
+}
+.dark-mode a {
+    border-bottom: 1px solid #e0e0e0;
+    color: #e0e0e0;
+}
+.dark-mode a:hover {
+    border-bottom: 0;
+}
+.dark-mode code {
+    background: #000000;
 }
 
-.sun-and-moon > :is(.moon, .sun) {
-  fill: var(--icon-fill);
-}
-
-.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
-  fill: var(--icon-fill-hover);
-}
-
-.sun-and-moon > .sun-beams {
-  stroke: var(--icon-fill);
-  stroke-width: 2px;
-}
-
-.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
-  stroke: var(--icon-fill-hover);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun {
-  transform: scale(1.75);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun-beams {
-  opacity: 0;
-}
-
-[data-theme="dark"] .sun-and-moon > .moon > circle {
-  transform: translateX(-7px);
-}
-
-@supports (cx: 1) {
-  [data-theme="dark"] .sun-and-moon > .moon > circle {
-    cx: 17;
-    transform: translateX(0);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .sun-and-moon > .sun {
-    transition: transform .5s var(--ease-elastic-3);
-  }
-
-  .sun-and-moon > .sun-beams {
-    transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
-  }
-
-  .sun-and-moon .moon > circle {
-    transition: transform .25s var(--ease-out-5);
-  }
-
-  @supports (cx: 1) {
-    .sun-and-moon .moon > circle {
-      transition: cx .25s var(--ease-out-5);
-    }
-  }
-
-  [data-theme="dark"] .sun-and-moon > .sun {
-    transition-timing-function: var(--ease-3);
-    transition-duration: .25s;
-    transform: scale(1.75);
-  }
-
-  [data-theme="dark"] .sun-and-moon > .sun-beams {
-    transition-duration: .15s;
-    transform: rotateZ(-25deg);
-  }
-
-  [data-theme="dark"] .sun-and-moon > .moon > circle {
-    transition-duration: .5s;
-    transition-delay: .25s;
-  }
+.theme-toggle {
+position: fixed;
+top: 20px;
+right: 20px;
+cursor: pointer;
+background-color: #00000000;
+color: #696969;
+font-size: 10px;
 }

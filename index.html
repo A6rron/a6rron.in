@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
     <title>A6 !!</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
-    <script src="script.js"></script>
     <style>
         ul {
             list-style-type: none; /* Remove default bullets */
@@ -17,52 +16,55 @@
         }
         body {
             margin: 5% auto;
-            background: #f2f2f2;
-            color: #000000;
+            background: #000000; /* Default to dark background */
+            color: #e0e0e0; /* Default to light text */
             font-family: monospace;
             font-size: 14px;
             line-height: 1.8;
             max-width: 73%;
             transition: background-color 0.3s, color 0.3s;
         }
-        code { background: white; }
+        code { background: #000000; } /* Default to dark mode */
         a {
-            border-bottom: 1px solid #444444;
-            color: #444444;
+            border-bottom: 1px solid #e0e0e0;
+            color: #e0e0e0;
             text-decoration: none;
         }
         a:hover { border-bottom: 0; }
-        .dark-mode {
-            background: #000000;
-            color: #e0e0e0;
+        .light-mode {
+            background: #ffffff;
+            color: #000000;
         }
-        .dark-mode a {
-            border-bottom: 1px solid #e0e0e0;
-            color: #e0e0e0;
+        .light-mode a {
+            border-bottom: 1px solid #444444;
+            color: #444444;
         }
-        .dark-mode a:hover {
+        .light-mode a:hover {
             border-bottom: 0;
         }
-        .dark-mode code {
-            background: #000000;
+        .light-mode code {
+            background: white;
         }
-        
         .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  background-color: #00000000;
-  color: #696969;
-  font-size: 10px;
-}
-
-
-
+            cursor: pointer;
+            background-color: transparent;
+            color: #6c6c6c;
+            font-size: 14px;
+            border: none;
+            padding: 0 5px;
+            vertical-align: middle;
+        }
+        .heading-container {
+            display: inline;
+        }
     </style>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">dark/light</button>
     <header>
         <h1>Aaron shaji.</h1>
         <nav>
@@ -74,11 +76,13 @@
     </header>
     <br>
     <section class="about">
-        <h2>//////</h2>
+        <h2>///
+            <button class="theme-toggle" onclick="toggleTheme()">Light/Dark</button>
+            ///</h2>
         <hr width="100%" size="3">
         <ul>
             <li style="margin-bottom: 10px;">Product | Film making | code</li>
-            <li style="margin-bottom: 10px;">Building - <a href="https://aarons-radical-site-d6bd9a.webflow.io/">Laboratory</a></li>
+            <li style="margin-bottom: 10px;">Building <a href="https://aarons-radical-site-d6bd9a.webflow.io/">Laboratory</a></li>
             <li style="margin-bottom: 10px;">Hitting in <a href="https://mulearn.org">Mulearn</a></li>
             <li style="margin-bottom: 10px;">Shipping shit</li>
         </ul>
@@ -87,13 +91,11 @@
         <hr width="100%" size="3">
         <h5>My perspectives on some things - <a>Notes</a></h5>
         <ul>
-            <li style="margin-bottom: 10px;">Just ask people for what you want, When you ask for something, people generally don't like saying no. Even if they can't fulfill your request, they'll often still offer some form of assistance. So, don't hesitate to ask for things as much as you can.</p>
-            </li>
-            <li style="margin-bottom: 10px;">It's all in your head, your thoughts don't define you; they're just passing through. Stay mindful, observe them, but don't let them take control.
-                Remember, you have the power to choose which thoughts to act on and which to let go.</li>
-            <li style="margin-bottom: 10px;">You are what you consume. The things you eat, read, watch, and listen to shape who you are, influencing your body, mind, and actions..</li>
+            <li style="margin-bottom: 10px;">Just ask people for what you want, When you ask for something, people generally don't like saying no. Even if they can't fulfill your request, they'll often still offer some form of assistance. So, don't hesitate to ask for things as much as you can.</li>
+            <li style="margin-bottom: 10px;">It's all in your head, your thoughts don't define you; they're just passing through. Stay mindful, observe them, but don't let them take control. Remember, you have the power to choose which thoughts to act on and which to let go.</li>
+            <li style="margin-bottom: 10px;">You are what you consume. The things you eat, read, watch, and listen to shape who you are, influencing your body, mind, and actions.</li>
             <li style="margin-bottom: 10px;">Make Notes, You wont regret it. Notes are like your brain's sticky notes—jot down what's important and stick to the point.</li>
-            <b><li  style="font-family: monospace;" >Mail me : <a href="mailto:Arnx5533@gmail.com">arnx5533@gmail.com</a></li></b>
+            <b><li style="font-family: monospace;">Mail me : <a href="mailto:Arnx5533@gmail.com">arnx5533@gmail.com</a></li></b>
         </ul>
     </section>
 </body>
