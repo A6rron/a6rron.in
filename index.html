@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
     <title>A6 !!</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="script.js"></script>
     <style>
         ul {
             list-style-type: none; /* Remove default bullets */
@@ -65,7 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Add this line */
+  z-index: 1000; /* Ensure it is above other content */
 }
 
 .theme-toggle:hover {
@@ -73,7 +74,6 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
   border-color: rgba(255, 255, 255, 0.4);
 }
-
 
     </style>
 </head>
@@ -112,10 +112,5 @@
             <b><li  style="font-family: monospace;" >Mail me : <a href="mailto:Arnx5533@gmail.com">arnx5533@gmail.com</a></li></b>
         </ul>
     </section>
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
 </body>
 </html>
