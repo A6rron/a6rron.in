@@ -19,12 +19,12 @@ nav {
 }
 
 a {
-    color: #9d9d9d; /* Light gray text color */
+    color: #c0bebe; /* Light gray text color */
     text-decoration: none; /* Remove underline */
 }
 
 a:hover {
-    color: rgb(98, 95, 95);  
+    color: rgb(165, 164, 164);  
 }
 
 
@@ -34,7 +34,7 @@ a {
 }
 
 .socials:hover {
-    color: rgb(98, 95, 95); 
+    color: rgb(177, 172, 172); 
     text-decoration: none; 
 }
 
