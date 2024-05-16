@@ -78,18 +78,11 @@ a:hover {
     transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
-.theme-toggle-button:hover {
-    background: rgba(126, 126, 126, 0.7); /* Darker on hover */
-}
-
 .light-mode .theme-toggle-button {
-    background: rgba(200, 200, 200, 0.5); /* Lighter background for light mode */
+    background: rgba(223, 222, 222, 0.5); /* Lighter background for light mode */
     color: #333333; /* Dark text color for light mode */
 }
 
-.light-mode .theme-toggle-button:hover {
-    background: rgba(180, 180, 180, 0.7); /* Slightly darker background on hover for light mode */
-}
 
 /* Styles specific to the first HTML file */
 .no-bullets {
