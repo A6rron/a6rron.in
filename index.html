@@ -6,29 +6,11 @@
     <title>A6 !!</title>
     <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Function to toggle between light and dark mode
-        function toggleTheme() {
-            // Toggle 'light-mode' class on the body
-            document.body.classList.toggle('light-mode');
-            // Store the current mode preference in local storage
-            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-        }
-
-        // Function to apply the theme based on stored preference
-        function applyTheme() {
-            // Retrieve the theme preference from local storage
-            const theme = localStorage.getItem('theme');
-            // If a theme preference is found
-            if (theme) {
-                // Apply the stored theme preference
-                document.body.classList.toggle('light-mode', theme === 'light');
-            }
-        }
-
-        // Apply theme when the page loads
-        window.onload = applyTheme;
-    </script>
+   <script>
+    function toggleTheme() {
+        document.body.classList.toggle('light-mode');
+    }
+</script>
 </head>
 <body class="main-body">
     <header>
