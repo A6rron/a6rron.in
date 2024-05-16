@@ -68,20 +68,18 @@ a:hover {
 .theme-toggle-button {
     cursor: pointer;
     background: rgba(80, 80, 80, 0.5); /* Semi-transparent black */
-    color: #b3b3b3; /* Light gray text color */
+    color: #9a9a9a; /* Light gray text color */
     font-size: 14px;
     border: none;
     padding: 5px 10px; /* Padding for better spacing */
     border-radius: 5px; /* Rounded corners */
     backdrop-filter: blur(10px); /* Blur effect */
     -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
 .theme-toggle-button:hover {
     background: rgba(126, 126, 126, 0.7); /* Darker on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
 
 .light-mode .theme-toggle-button {
@@ -91,7 +89,6 @@ a:hover {
 
 .light-mode .theme-toggle-button:hover {
     background: rgba(180, 180, 180, 0.7); /* Slightly darker background on hover for light mode */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
 
 /* Styles specific to the first HTML file */
