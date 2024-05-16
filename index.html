@@ -6,15 +6,15 @@
     <title>A6 !!</title>
     <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
     <style>
-        ul {
+        .no-bullets {
             list-style-type: none; /* Remove default bullets */
             padding: 0; /* Remove default padding */
         }
-        li::before {
+        .custom-bullets::before {
             content: "\2013"; /* Use en dash (–) as bullet points */
             margin-right: 0.5em; /* Add some space between the en dash and the text */
         }
-        body {
+        .main-body {
             margin: 5% auto;
             background: #000000; /* Default to dark background */
             color: #e0e0e0; /* Default to light text */
@@ -25,28 +25,28 @@
             max-width: 90%;
             transition: background-color 0.3s, color 0.3s;
         }
-        code { background: #000000; } /* Default to dark mode */
-        a {
+        .code-block { background: #000000; } /* Default to dark mode */
+        .link {
             border-bottom: 1px solid #e0e0e0;
             color: #e0e0e0;
             text-decoration: none;
         }
-        a:hover { border-bottom: 0; }
+        .link:hover { border-bottom: 0; }
         .light-mode {
             background: #ffffff;
             color: #000000;
         }
-        .light-mode a {
+        .light-mode .link {
             border-bottom: 1px solid #444444;
             color: #444444;
         }
-        .light-mode a:hover {
+        .light-mode .link:hover {
             border-bottom: 0;
         }
-        .light-mode code {
+        .light-mode .code-block {
             background: white;
         }
-        .theme-toggle {
+        .theme-toggle-button {
             cursor: pointer;
             background-color: transparent;
             color: #6c6c6c;
@@ -55,7 +55,7 @@
             padding: 0 5px;
             vertical-align: middle;
         }
-        .heading-container {
+        .inline-container {
             display: inline;
         }
     </style>
@@ -65,39 +65,39 @@
         }
     </script>
 </head>
-<body>
+<body class="main-body">
     <header>
         <h1>Aaron shaji.</h1>
         <nav>
-            <a class="socials" href="https://twitter.com/A6rron">Twitter</a>
-            <a class="socials" href="https://github.com/A6rron">Github</a>
-            <a class="socials" href="https://twitch.tv/a6rron">Twitch</a>
-            <a class="socials" href="https://youtube.com/channel/UCWONX383kSyTlmrGR9lMI9w">YouTube</a>
+            <a class="socials link" href="https://twitter.com/A6rron">Twitter</a>
+            <a class="socials link" href="https://github.com/A6rron">Github</a>
+            <a class="socials link" href="https://twitch.tv/a6rron">Twitch</a>
+            <a class="socials link" href="https://youtube.com/channel/UCWONX383kSyTlmrGR9lMI9w">YouTube</a>
         </nav>
     </header>
     <br>
     <section class="about">
         <h2>///
-            <button class="theme-toggle" onclick="toggleTheme()"><tt>Light/Dark</tt></button>
+            <button class="theme-toggle-button" onclick="toggleTheme()"><tt>Light/Dark</tt></button>
             ///</h2>
         <hr width="100%" size="3">
-        <ul>
-            <li style="margin-bottom: 10px;">Product | Film making | code</li>
-            <li style="margin-bottom: 10px;">Building <a href="https://aarons-radical-site-d6bd9a.webflow.io/">Laboratory</a></li>
-            <li style="margin-bottom: 10px;">Hitting in <a href="https://mulearn.org">Mulearn</a></li>
-            <li style="margin-bottom: 10px;">Shipping shit</li>
+        <ul class="no-bullets">
+            <li class="custom-bullets" style="margin-bottom: 10px;">Product | Film making | code</li>
+            <li class="custom-bullets" style="margin-bottom: 10px;">Building <a class="link" href="https://aarons-radical-site-d6bd9a.webflow.io/">Laboratory</a></li>
+            <li class="custom-bullets" style="margin-bottom: 10px;">Hitting in <a class="link" href="https://mulearn.org">Mulearn</a></li>
+            <li class="custom-bullets" style="margin-bottom: 10px;">Shipping shit</li>
         </ul>
         <hr width="100%" size="3">
         <b><p style="font-family: monospace">"Words and ideas can change the world" - Robin Williams</p></b>
         <hr width="100%" size="3">
 
-        <h4>My perspectives on things - <a href="./notes">Notes</a></h4>
-        <ul>
-            <li style="margin-bottom: 10px;">Just ask people for what you want, When you ask for something, people generally don't like saying no. Even if they can't fulfill your request, they'll often still offer some form of assistance. So, don't hesitate to ask for things as much as you can.</li>
-          <li style="margin-bottom: 10px;">Make Notes, You wont regret it. Notes are like your brain's sticky notes—jot down what's important and stick to the point.</li>
-            <li style="margin-bottom: 10px;">It's all in your head, your thoughts don't define you; they're just passing through. Stay mindful, observe them, but don't let them take control. Remember, you have the power to choose which thoughts to act on and which to let go.</li>
-            <li style="margin-bottom: 10px;">You are what you consume. The things you eat, read, watch, and listen to shape who you are, influencing your body, mind, and actions.</li>
-            <b><li style="font-family: monospace;">Mail me : <a href="mailto:Arnx5533@gmail.com">arnx5533@gmail.com</a></li></b>
+        <h4>My perspectives on things - <a class="link" href="./notes">Notes</a></h4>
+        <ul class="no-bullets">
+            <li class="custom-bullets" style="margin-bottom: 10px;">Just ask people for what you want, When you ask for something, people generally don't like saying no. Even if they can't fulfill your request, they'll often still offer some form of assistance. So, don't hesitate to ask for things as much as you can.</li>
+            <li class="custom-bullets" style="margin-bottom: 10px;">Make Notes, You wont regret it. Notes are like your brain's sticky notes—jot down what's important and stick to the point.</li>
+            <li class="custom-bullets" style="margin-bottom: 10px;">It's all in your head, your thoughts don't define you; they're just passing through. Stay mindful, observe them, but don't let them take control. Remember, you have the power to choose which thoughts to act on and which to let go.</li>
+            <li class="custom-bullets" style="margin-bottom: 10px;">You are what you consume. The things you eat, read, watch, and listen to shape who you are, influencing your body, mind, and actions.</li>
+            <b><li class="custom-bullets" style="font-family: monospace;">Mail me : <a class="link" href="mailto:Arnx5533@gmail.com">arnx5533@gmail.com</a></li></b>
         </ul>
     </section>
 </body>

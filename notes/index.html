@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
     <style>
-        body {
+        .main-body {
             margin: 5% auto;
             background: #000000;
             color: #e0e0e0;
@@ -15,37 +15,37 @@
             max-width: 90%;
             transition: background-color 0.3s, color 0.3s;
         }
-        code { background: #000000; }
-        a {
+        .code-block { background: #000000; }
+        .link {
             border-bottom: 1px solid #e0e0e0;
             color: #e0e0e0;
             text-decoration: none;
         }
-        a:hover { border-bottom: 0; }
+        .link:hover { border-bottom: 0; }
         .light-mode {
             background: #ffffff;
             color: #000000;
         }
-        .light-mode a {
+        .light-mode .link {
             border-bottom: 1px solid #444444;
             color: #444444;
         }
-        .light-mode a:hover {
+        .light-mode .link:hover {
             border-bottom: 0;
         }
-        .light-mode code {
+        .light-mode .code-block {
             background: white;
         }
-        .theme-toggle {
+        .theme-toggle-button {
             cursor: pointer;
             background-color: transparent;
-            color: #6c6c6c;
+            color: #9a9999;
             font-size: 14px;
             border: none;
             padding: 0 5px;
             vertical-align: middle;
         }
-        .post {
+        .post-container {
             margin-bottom: 20px; /* Reduce spacing between posts */
         }
         .post-title {
@@ -73,27 +73,27 @@
         }
     </script>
 </head>
-<body>
+<body class="main-body">
     <h1>Notes</h1>
-    <h2>/// <button class="theme-toggle" onclick="toggleTheme()"><tt>Light/Dark</tt></button> ///</h2>
+    <h2>/// <button class="theme-toggle-button" onclick="toggleTheme()"><tt>Light/Dark</tt></button> ///</h2>
     <hr width="100%" size="3">
     <p><b>My space on the internet where I share thoughts on life, products, finance and other shit.</b></p>
     <hr width="100%" size="3">
 
     <h3>Featured</h3>
-    <div class="post">
+    <div class="post-container">
         <p class="post-title">Venture Capital 101</p>
         <p class="post-date"> Jan 24, 2024 | 03:30 PM</p>
         <p class="post-description">A Beginner's Guide to Understanding How Venture Capital Works</p>
     </div>
 
-    <div class="post">
+    <div class="post-container">
         <p class="post-title">2023- Finding the Light at the End of the Tunnel</p>
         <p class="post-date"> Dec 31, 2023 | 12:01 AM</p>
         <p class="post-description">The tunnels of self-discovery, grief, purpose, and wants - 2023 reflections</p>
     </div>
 
-    <div class="post">
+    <div class="post-container">
         <p class="post-title">Rethinking the product manager role and the product management function</p>
         <p class="post-date"> Oct 5, 2023 | 03:30 PM</p>
         <p class="post-description">With Airbnb restructuring the role to have a more marketing focus, and some other companies stating that they no longer have product managers, I believe it's important for us to take a step back and reexamine the field of product management.</p>
@@ -102,13 +102,13 @@
     <hr width="100%" size="3">
 
     <h3>Recent Posts</h3>
-    <div class="post">
+    <div class="post-container">
         <p class="post-title">Minimum Viable Processes - a better alternative to minimum viable products?</p>
         <p class="post-date"> Apr 15, 2024 | 03:30 PM</p>
         <p class="post-description">How running a minimum viable process can help you minimize risks</p>
     </div>
 
-    <div class="post">
+    <div class="post-container">
         <p class="post-title">The Startup Product Manager</p>
         <p class="post-date"> Jan 30, 2024 | 08:30 PM</p>
         <p class="post-description">What does it mean to be the first product manager at a startup (not existential, we don't go down that road)? What does a product manager even do at an early-stage startup? What are the challenges?</p>
