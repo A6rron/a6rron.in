@@ -1,8 +1,0 @@
-ul {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
-}
-li::before {
-    content: "\2013"; /* Use en dash (–) as bullet points */
-    margin-right: 0.5em; /* Add some space between the en dash and the text */
-}

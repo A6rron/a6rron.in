@@ -5,60 +5,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
     <title>A6 !!</title>
     <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
-    <style>
-        .no-bullets {
-            list-style-type: none; /* Remove default bullets */
-            padding: 0; /* Remove default padding */
-        }
-        .custom-bullets::before {
-            content: "\2013"; /* Use en dash (–) as bullet points */
-            margin-right: 0.5em; /* Add some space between the en dash and the text */
-        }
-        .main-body {
-            margin: 5% auto;
-            background: #000000; /* Default to dark background */
-            color: #e0e0e0; /* Default to light text */
-            font-family: monospace;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 1.8;
-            max-width: 90%;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .code-block { background: #000000; } /* Default to dark mode */
-        .link {
-            border-bottom: 1px solid #e0e0e0;
-            color: #e0e0e0;
-            text-decoration: none;
-        }
-        .link:hover { border-bottom: 0; }
-        .light-mode {
-            background: #ffffff;
-            color: #000000;
-        }
-        .light-mode .link {
-            border-bottom: 1px solid #444444;
-            color: #444444;
-        }
-        .light-mode .link:hover {
-            border-bottom: 0;
-        }
-        .light-mode .code-block {
-            background: white;
-        }
-        .theme-toggle-button {
-            cursor: pointer;
-            background-color: transparent;
-            color: #6c6c6c;
-            font-size: 14px;
-            border: none;
-            padding: 0 5px;
-            vertical-align: middle;
-        }
-        .inline-container {
-            display: inline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <script>
         function toggleTheme() {
             document.body.classList.toggle('light-mode');
