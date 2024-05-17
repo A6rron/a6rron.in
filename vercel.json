@@ -1,6 +1,0 @@
-{
-    "routes": [
-      { "src": "/laboratory/(.*)", "dest": "https://snake-game-omega-smoky.vercel.app/$1" }
-    ]
-  }
-  
