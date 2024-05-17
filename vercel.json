@@ -1,9 +1,5 @@
 {
-    "routes": [
-      {
-        "src": "/snake-game(.*)",
-        "dest": "https://snake-game-omega-smoky.vercel.app/"
-      }
+    "rewrites": [
+      {"source": "/snake-game", "destination": "https://snake-game-omega-smoky.vercel.app/"},
     ]
   }
-  
