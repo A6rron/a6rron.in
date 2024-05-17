@@ -2,7 +2,7 @@
     "routes": [
       {
         "src": "/snake-game/(.*)",
-        "dest": "https://snake-game-omega-smoky.vercel.app/$1"
+        "dest": "https://snake-game-omega-smoky.vercel.app/"
       }
     ]
   }
