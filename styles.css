@@ -10,6 +10,12 @@ body {
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
 }
 
+/* Light mode styles for local storage*/
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
 code {
     background: #000000; /* Background color for code blocks */
 }
