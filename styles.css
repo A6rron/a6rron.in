@@ -1,90 +1,140 @@
+/* Global Styles */
+body {
+    margin: 5% auto; /* Center the content vertically */
+    background: #000000; /* Background color */
+    color: #e0e0e0; /* Text color */
+    font-family: monospace; /* Font family */
+    font-size: 15px; /* Base font size */
+    line-height: 1.8; /* Line height */
+    max-width: 90%; /* Limit content width */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+code {
+    background: #000000; /* Background color for code blocks */
+}
+
+a {
+    border-bottom: 1px solid #e0e0e0; /* Add underline effect on hover */
+    color: #e0e0e0; /* Link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+    border-bottom: 0; /* Remove underline on hover */
+}
+
+/* Light Mode */
+.light-mode {
+    background: #ffffff; /* Light mode background color */
+    color: #000000; /* Light mode text color */
+}
+
+.light-mode a {
+    border-bottom: 1px solid #444444; /* Add underline effect in light mode */
+    color: #444444; /* Link color in light mode */
+}
+
+.light-mode a:hover {
+    border-bottom: 0; /* Remove underline on hover in light mode */
+}
+
+.light-mode code {
+    background: white; /* Code block background color in light mode */
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative; /* Position relative for child elements */
+    max-width: 800px; /* Maximum width of the timeline */
+    margin: 0 auto; /* Center the timeline horizontally */
+    padding-top: 30px; /* Top padding for spacing */
+}
+
+.timeline::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position absolute to place it correctly */
+    width: 4px; /* Width of the vertical line */
+    background-color: #333; /* Color of the vertical line */
+    top: 0; /* Align to the top of the timeline */
+    bottom: 10%; /* Leave some space at the bottom */
+    left: 50%; /* Position it in the middle */
+    margin-left: -2px; /* Adjust the position */
+}
+
+.timeline-item {
+    padding: 8px 30px; /* Padding for timeline items */
+    position: relative; /* Position relative for child elements */
+    width: 50%; /* Width of each timeline item */
+}
+
+.timeline-item::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position absolute to place it correctly */
+    width: 24px; /* Width of the marker */
+    height: 24px; /* Height of the marker */
+    background-color: #ff9f55; /* Color of the marker */
+    border: 4px solid #333; /* Border of the marker */
+    top: 50%; /* Position it vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    border-radius: 50%; /* Make it a circle */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.left {
+    right: 7%; /* Position timeline item to the left */
+}
+
+.right {
+    left: 50%; /* Position timeline item to the right */
+}
+
+.left::before {
+    right: -12px; /* Adjust marker position for left-aligned items */
+}
+
+.right::before {
+    left: -16px; /* Adjust marker position for right-aligned items */
+}
+
+.content {
+    padding: 15px 25px; /* Padding for timeline item content */
+    background-color: #333; /* Background color of content */
+    position: relative; /* Position relative for child elements */
+    border-radius: 4px; /* Rounded corners */
+    color: #fff; /* Text color */
+}
+
+/* Additional Styles */
+.theme-toggle-button {
+    cursor: pointer; /* Set cursor to pointer */
+    background: rgba(80, 80, 80, 0.5); /* Background color of the button */
+    color: #9a9a9a; /* Text color of the button */
+    font-size: 14px; /* Font size of the button */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.light-mode .theme-toggle-button {
+    background: rgba(223, 222, 222, 0.5); /* Background color of the button in light mode */
+    color: #333333; /* Text color of the button in light mode */
+}
+
+/* Additional CSS from the provided code */
 ul {
     list-style-type: none; /* Remove default bullets */
     padding: 0; /* Remove default padding */
 }
+
 li::before {
     content: "\2013"; /* Use en dash (–) as bullet points */
     margin-right: 0.5em; /* Add some space between the en dash and the text */
 }
 
-/* Shared Styles */
-body {
-    margin: 5% auto;
-    background: #000000;
-    color: #e0e0e0;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.8;
-    max-width: 90%;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-code {
-    background: #000000;
-}/* Shared Styles */
-body {
-    margin: 5% auto;
-    background: #000000;
-    color: #e0e0e0;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.8;
-    max-width: 90%;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-code {
-    background: #000000;
-}
-
-a {
-    border-bottom: 1px solid #e0e0e0;
-    color: #e0e0e0;
-    text-decoration: none;
-}
-
-a:hover {
-    border-bottom: 0;
-}
-
-.light-mode {
-    background: #ffffff;
-    color: #000000;
-}
-
-.light-mode a {
-    border-bottom: 1px solid #444444;
-    color: #444444;
-}
-
-.light-mode a:hover {
-    border-bottom: 0;
-}
-
-.light-mode code {
-    background: white;
-}
-
-.theme-toggle-button {
-    cursor: pointer;
-    background: rgba(80, 80, 80, 0.5); /* Semi-transparent black */
-    color: #9a9a9a; /* Light gray text color */
-    font-size: 14px;
-    border: none;
-    padding: 5px 10px; /* Padding for better spacing */
-    border-radius: 5px; /* Rounded corners */
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
-    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
-}
-
-.light-mode .theme-toggle-button {
-    background: rgba(223, 222, 222, 0.5); /* Lighter background for light mode */
-    color: #333333; /* Dark text color for light mode */
-}
-
-
-/* Styles specific to the first HTML file */
 .no-bullets {
     list-style-type: none; /* Remove default bullets */
     padding: 0; /* Remove default padding */
@@ -95,16 +145,15 @@ a:hover {
     margin-right: 0.5em; /* Add some space between the en dash and the text */
 }
 
-/* Styles specific to the second HTML file */
 .post-container {
     margin-bottom: 20px; /* Reduce spacing between posts */
 }
 
 .post-title {
     margin-bottom: 3px; /* Reduce space below title */
-    color: #a8a8a8;
-    font-size: 18px;
-    font-weight: bold;
+    color: #a8a8a8; /* Title color */
+    font-size: 18px; /* Title font size */
+    font-weight: bold; /* Title font weight */
 }
 
 .post-description {
@@ -112,8 +161,8 @@ a:hover {
 }
 
 .post-date {
-    color: #9e9e9e;
-    margin-bottom: 5px;
+    color: #9e9e9e; /* Date color */
+    margin-bottom: 5px; /* Reduce space below date */
 }
 
 .post-title,
@@ -121,6 +170,3 @@ a:hover {
 .post-date {
     margin-top: 0; /* Remove default margin */
 }
-
-
-
