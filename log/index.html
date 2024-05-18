@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log / Updates</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Styles for the timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+
+        /* Vertical line in the timeline */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #333;
+            top: 0;
+            bottom: 10%;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        /* Individual timeline items */
+        .timeline-item {
+            padding: 8px 30px;
+            position: relative;
+            width: 50%;
+        }
+
+        /* Marker before each timeline item */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #ff9f55;
+            border: 4px solid #333;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Left-aligned timeline items */
+        .left {
+            right: 7%;
+        }
+
+        /* Right-aligned timeline items */
+        .right {
+            left: 50%;
+        }
+
+        /* Adjustment for left-aligned timeline item marker position */
+        .left::before {
+            right: -12px;
+        }
+
+        /* Adjustment for right-aligned timeline item marker position */
+        .right::before {
+            left: -16px;
+        }
+
+        /* Content of each timeline item */
+        .content {
+            padding: 15px 25px;
+            background-color: #333;
+            position: relative;
+            border-radius: 4px;
+            color: #fff;
+        }
+    </style>
+    
+</head>
+<body class="main-body">
+    <!-- Title -->
+    <h2>Log</h2>
+    <!-- Theme toggle button -->
+    <h2>/// <button class="theme-toggle-button" onclick="toggleTheme()"><tt>Light/Dark</tt></button> ///</h2>
+    <!-- Horizontal line -->
+    <hr width="100%" size="3">
+    <!-- Introduction -->
+    <p><b>My log: updates, project progress, and all the epic stuff I'm building.</b></p>
+    <!-- Horizontal line -->
+    <hr width="100%" size="3">
+
+    <!-- Timeline container -->
+    <div class="timeline">
+        <!-- Individual timeline items -->
+        <div class="timeline-item right">
+            <!-- Content of the timeline item -->
+            <div class="content">
+                <h3>05/18/2024</h3>
+                <p>release and deployment.</p>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>04/15/2024</h3>
+                <p>Working on final touches and testing.</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="content">
+                <h3>03/01/2024</h3>
+                <p>Began development and implementation.</p>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>01/15/2024</h3>
+                <p>Completed the initial planning and research phase.</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="content">
+                <h3>12/01/2023</h3>
+                <p>Started working on a new project idea.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle between light and dark mode
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+</body>
+</html>
