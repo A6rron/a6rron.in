@@ -1,0 +1,15 @@
+[
+    {
+      "title": "Understanding JavaScript Closures",
+      "author": "Jane Doe",
+      "date": "2024-06-01",
+      "content": "JavaScript closures are a fundamental concept that every JavaScript developer should understand and i dont knwo this is just a test"
+    },
+    {
+      "title": "A Guide to Python Decorators",
+      "author": "John Smith",
+      "date": "2024-05-25",
+      "content": "Decorators in Python are a powerful tool that allows you to modify the behavior of functions or classes which is because this is a test"
+    }
+  ]
+  
