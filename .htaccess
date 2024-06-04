@@ -1,4 +1,0 @@
-RewriteEngine On
-
-# Redirect /notes to /pages/notes.html
-RewriteRule ^notes$ /pages/notes.html [L]

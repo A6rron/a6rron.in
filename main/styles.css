@@ -119,7 +119,7 @@ a:hover {
     font-size: 14px; /* Font size of the button */
     border: none; /* Remove border */
     padding: 5px 10px; /* Padding for better spacing */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 3px; /* Rounded corners */
     backdrop-filter: blur(10px); /* Apply blur effect */
     -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
     transition: background 0.3s, box-shadow 0.3s; /* Smooth transitions */
@@ -151,42 +151,18 @@ li::before {
     margin-right: 0.5em; /* Add some space between the en dash and the text */
 }
 
-.post-container {
-    margin-bottom: 20px; /* Reduce spacing between posts */
-}
 
-.post-title {
-    margin-bottom: 3px; /* Reduce space below title */
-    color: #a8a8a8; /* Title color */
-    font-size: 18px; /* Title font size */
-    font-weight: bold; /* Title font weight */
-}
 
-.post-description {
-    margin-bottom: 5px; /* Reduce space below description */
-}
-
-.post-date {
-    color: #9e9e9e; /* Date color */
-    margin-bottom: 5px; /* Reduce space below date */
-}
-
-.post-title,
-.post-description,
-.post-date {
-    margin-top: 0; /* Remove default margin */
-}
-
-/* Blogs */
-#blog-container {
-    width: 80%;
+/* Notes */
+#notes-container {
+    width: 40%;
     margin: 0 auto;
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.blog {
+.notes {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }

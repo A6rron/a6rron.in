@@ -29,13 +29,18 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function for Blogs
+
+function goHome() {
+    window.location.href = "/index.html"; // Replace "/" with the URL of your home page
+}
+
+// Function for all-posts
 function generateBlogHTML(blogs) {
-    const blogContainer = document.querySelector('.blog-container');
+    const blogContainer = document.querySelector('.notes-container');
 
     blogs.forEach(blog => {
         const blogDiv = document.createElement('div');
-        blogDiv.className = 'blog';
+        blogDiv.className = 'notes';
         
         const blogTitle = document.createElement('h2');
         blogTitle.textContent = blog.title;
@@ -53,9 +58,9 @@ function generateBlogHTML(blogs) {
     });
 }
 
-// Fetch JSON data and generate the blogs HTML on page load
+// Fetch JSON data and generate the all-posts HTML on page load
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('blogs.json')
+    fetch('/pages/data/all-posts.json')
         .then(response => response.json())
         .then(blogs => {
             generateBlogHTML(blogs);
@@ -63,15 +68,3 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error loading JSON data:', error));
 });
 
-// Function to toggle between light and dark mode
-function toggleTheme() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
-}
-
-
-
-function goHome() {
-    window.location.href = "/index.html"; // Replace "/" with the URL of your home page
-}
