@@ -9,6 +9,47 @@ body {
     max-width: 90%; /* Limit content width */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
 }
+/* Additional Styles */
+.theme-toggle-button {
+    cursor: pointer; /* Set cursor to pointer */
+    background: rgba(80, 80, 80, 0.5); /* Background color of the button */
+    color: #9a9a9a; /* Text color of the button */
+    font-size: 14px; /* Font size of the button */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding for better spacing */
+    border-radius: 3px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.light-mode .theme-toggle-button {
+    background: rgba(223, 222, 222, 0.5); /* Background color of the button in light mode */
+    color: #333333; /* Text color of the button in light mode */
+}
+
+/* Additional CSS from the provided code */
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+
+li::before {
+    content: "\2013"; /* Use en dash (–) as bullet points */
+    margin-right: 0.5em; /* Add some space between the en dash and the text */
+}
+
+.no-bullets {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.custom-bullets::before {
+    content: "\2013"; /* Use en dash (–) as bullet points */
+    margin-right: 0.5em; /* Add some space between the en dash and the text */
+}
+
+
 
 /* Light mode styles for local storage*/
 body.light-mode {
@@ -111,60 +152,20 @@ a:hover {
     color: #fff; /* Text color */
 }
 
-/* Additional Styles */
-.theme-toggle-button {
-    cursor: pointer; /* Set cursor to pointer */
-    background: rgba(80, 80, 80, 0.5); /* Background color of the button */
-    color: #9a9a9a; /* Text color of the button */
-    font-size: 14px; /* Font size of the button */
-    border: none; /* Remove border */
-    padding: 5px 10px; /* Padding for better spacing */
-    border-radius: 3px; /* Rounded corners */
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
-    transition: background 0.3s, box-shadow 0.3s; /* Smooth transitions */
-}
-
-.light-mode .theme-toggle-button {
-    background: rgba(223, 222, 222, 0.5); /* Background color of the button in light mode */
-    color: #333333; /* Text color of the button in light mode */
-}
-
-/* Additional CSS from the provided code */
-ul {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
-}
-
-li::before {
-    content: "\2013"; /* Use en dash (–) as bullet points */
-    margin-right: 0.5em; /* Add some space between the en dash and the text */
-}
-
-.no-bullets {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
-}
-
-.custom-bullets::before {
-    content: "\2013"; /* Use en dash (–) as bullet points */
-    margin-right: 0.5em; /* Add some space between the en dash and the text */
-}
-
-
 
 /* Notes */
 #notes-container {
     width: 40%;
     margin: 0 auto;
     background: #ffffff;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .notes {
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    padding: 0; /* Change this line */
+    line-height: 1; /* Add this line */
 }
 
 em {

@@ -1,7 +1,7 @@
 // Function to apply the stored theme as early as possible
 (function() {
     var storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'light') {
+    if (storedTheme === 'light' || storedTheme === null) {
         document.body.classList.add('light-mode');
     } else {
         document.body.classList.remove('light-mode');
@@ -22,17 +22,17 @@ function toggleTheme() {
 // Apply the theme when the page loads (optional, as a safety measure)
 window.addEventListener('DOMContentLoaded', function() {
     var storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'light') {
+    if (storedTheme === 'light' || storedTheme === null) {
         document.body.classList.add('light-mode');
     } else {
         document.body.classList.remove('light-mode');
     }
 });
 
-
 function goHome() {
     window.location.href = "/index.html"; // Replace "/" with the URL of your home page
 }
+
 
 // Function for all-posts
 function generateBlogHTML(blogs) {
@@ -60,7 +60,7 @@ function generateBlogHTML(blogs) {
 
 // Fetch JSON data and generate the all-posts HTML on page load
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/pages/data/all-posts.json')
+    fetch('/main/data/all-posts.json')
         .then(response => response.json())
         .then(blogs => {
             generateBlogHTML(blogs);
