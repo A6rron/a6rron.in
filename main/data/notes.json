@@ -1,6 +1,7 @@
-/* featured posts */
 
-[
+
+{
+  "featured posts":[
     {
       "title": "Understanding JavaScript Closures",
       "author": "Jane Doe",
@@ -14,11 +15,9 @@
       "content": "Decorators in Python are a powerful tool that allows you to modify the behavior of functions or classes which is because this is a test"
     }
   ]
-  
-
-/* recent posts */
-
-  [
+},
+{
+    "recent posts":[
     {
       "title": "Understanding JavaScript Closures",
       "author": "Jane Doe",
@@ -32,3 +31,4 @@
       "content": "Decorators in Python are a powerful tool that allows you to modify the behavior of functions or classes which is because this is a test"
     }
   ]
+}
