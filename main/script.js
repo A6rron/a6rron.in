@@ -132,6 +132,12 @@ function generateProjectHTML(projects) {
         projectLink.target = "_blank";
         projectDiv.appendChild(projectLink);
 
+        // Create and append hyphen separator
+        const hyphenSeparator = document.createElement('div');
+        hyphenSeparator.textContent = '-';
+        hyphenSeparator.style.textAlign = 'left';
+        projectDiv.appendChild(hyphenSeparator);
+
         projectContainer.appendChild(projectDiv);
     });
 }
