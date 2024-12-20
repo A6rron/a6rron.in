@@ -1,5 +1,7 @@
-/* Global Styles */
-body {
+/* =========================
+   Global Styles
+   ========================= */
+   body {
     margin: 5% auto; /* Center the content vertically */
     background: #000000; /* Background color */
     color: #c7c6c6; /* Text color */
@@ -8,8 +10,14 @@ body {
     line-height: 1.8; /* Line height */
     max-width: 90%; /* Limit content width */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes full height */
 }
-/* Additional Styles */
+
+/* =========================
+   Button Styles
+   ========================= */
 .theme-toggle-button {
     cursor: pointer; /* Set cursor to pointer */
     background: rgba(80, 80, 80, 0.5); /* Background color of the button */
@@ -28,7 +36,9 @@ body {
     color: #333333; /* Text color of the button in light mode */
 }
 
-/* Additional CSS from the provided code */
+/* =========================
+   List Styles
+   ========================= */
 ul {
     list-style-type: none; /* Remove default bullets */
     padding: 0; /* Remove default padding */
@@ -49,32 +59,12 @@ li::before {
     margin-right: 0.5em; /* Add some space between the en dash and the text */
 }
 
-
-
-/* Light mode styles for local storage*/
+/* =========================
+   Light Mode Styles
+   ========================= */
 body.light-mode {
-    background-color: #fff;
-    color: #000;
-}
-
-code {
-    background: #000000; /* Background color for code blocks */
-}
-
-a {
-    border-bottom: 1px solid #e0e0e0; /* Add underline effect on hover */
-    color: #e0e0e0; /* Link color */
-    text-decoration: none; /* Remove default underline */
-}
-
-a:hover {
-    border-bottom: 0; /* Remove underline on hover */
-}
-
-/* Light Mode */
-.light-mode {
-    background: #ffffff; /* Light mode background color */
-    color: #000000; /* Light mode text color */
+    background-color: #fff; /* Light mode background color */
+    color: #000; /* Light mode text color */
 }
 
 .light-mode a {
@@ -90,7 +80,29 @@ a:hover {
     background: white; /* Code block background color in light mode */
 }
 
-/* Timeline Styles */
+/* =========================
+   Code Block Styles
+   ========================= */
+code {
+    background: #000000; /* Background color for code blocks */
+}
+
+/* =========================
+   Link Styles
+   ========================= */
+a {
+    border-bottom: 1px solid #e0e0e0; /* Add underline effect on hover */
+    color: #e0e0e0; /* Link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+    border-bottom: 0; /* Remove underline on hover */
+}
+
+/* =========================
+   Timeline Styles
+   ========================= */
 .timeline {
     position: relative; /* Position relative for child elements */
     max-width: 800px; /* Maximum width of the timeline */
@@ -152,42 +164,34 @@ a:hover {
     color: #fff; /* Text color */
 }
 
-
-/* Notes */
-#notes-container {
-    width: 40%;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* =========================
+   Notes and Projects Styles
+   ========================= */
+#notes-container, #projects-container {
+    width: 40%; /* Set width for notes and projects containers */
+    margin: 0 auto; /* Center the containers */
+    background: #ffffff; /* Background color */
+    padding: 10px; /* Padding for better spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
-.notes {
-    border-bottom: 1px solid #ddd;
+.notes, .projects {
+    border-bottom: 1px solid #ddd; /* Bottom border for notes and projects */
     padding: 0; /* Change this line */
     line-height: 1; /* Add this line */
 }
 
 em {
-    color: #9e9b9b;
+    color: #9e9b9b; /* Color for emphasized text */
 }
 
-#projects-container {
-    width: 40%;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.last-updated {
+    color: #7f7f7f; /* Color for last updated text */
 }
 
-.projects {
-    border-bottom: 1px solid #ddd;
-    padding: 0; /* Change this line */
-    line-height: 1; /* Add this line */
+/* =========================
+   Footer Styles
+   ========================= */
+footer {
+    margin-top: auto; /* Push footer to the bottom */
 }
-
-em {
-    color: #9e9b9b;
-}
-
-
