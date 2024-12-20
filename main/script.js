@@ -112,3 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading JSON data:', error));
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lastUpdatedElement = document.getElementById('last-updated');
+    const lastUpdated = new Date(document.lastModified);
+  
+    // Format the date
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    lastUpdatedElement.textContent = `Last updated: ${lastUpdated.toLocaleDateString(undefined, options)}`;
+  });
+  
