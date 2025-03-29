@@ -7,7 +7,7 @@
     color: #c7c6c6; /* Text color */
     font-family: monospace; /* Font family */
     font-size: 15px; /* Base font size */
-    line-height: 1.8; /* Line height */
+    line-height: 2.0; /* Line height */
     max-width: 90%; /* Limit content width */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
     display: flex; /* Use flexbox for layout */
@@ -32,10 +32,7 @@
     color: #ffcc00; /* Change text color on hover to a bright yellow */
 }
 
-/* Add this to remove the focus outline */
-.theme-toggle-button:focus {
-    outline: none; /* Remove the default focus outline */
-}
+
 
 .light-mode .theme-toggle-button {
   
