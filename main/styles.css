@@ -1,7 +1,7 @@
 /* =========================
    Global Styles
    ========================= */
-   body {
+body {
     margin: 5% auto; /* Center the content vertically */
     background: #000000; /* Background color */
     color: #c7c6c6; /* Text color */
@@ -32,17 +32,14 @@
     color: #ffcc00; /* Change text color on hover to a bright yellow */
 }
 
-
-
 .light-mode .theme-toggle-button {
-  
     color: #333333; /* Text color of the button in light mode */
 }
 
 /* =========================
    List Styles
    ========================= */
-ul {
+ul, .no-bullets {
     list-style-type: none; /* Remove default bullets */
     padding: 0; /* Remove default padding */
 }
@@ -50,11 +47,6 @@ ul {
 li::before {
     content: "\2013"; /* Use en dash (–) as bullet points */
     margin-right: 0.5em; /* Add some space between the en dash and the text */
-}
-
-.no-bullets {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
 }
 
 .custom-bullets::before {
@@ -103,61 +95,8 @@ a:hover {
     border-bottom: 0; /* Remove underline on hover */
 }
 
-/* =========================
-   Timeline Styles
-   ========================= */
-.timeline {
-    position: relative; /* Position relative for child elements */
-    max-width: 800px; /* Maximum width of the timeline */
-    margin: 0 auto; /* Center the timeline horizontally */
-    padding-top: 30px; /* Top padding for spacing */
-}
 
-.timeline::after {
-    content: ''; /* Create a pseudo-element */
-    position: absolute; /* Position absolute to place it correctly */
-    width: 4px; /* Width of the vertical line */
-    background-color: #333; /* Color of the vertical line */
-    top: 0; /* Align to the top of the timeline */
-    bottom: 10%; /* Leave some space at the bottom */
-    left: 50%; /* Position it in the middle */
-    margin-left: -2px; /* Adjust the position */
-}
 
-.timeline-item {
-    padding: 8px 30px; /* Padding for timeline items */
-    position: relative; /* Position relative for child elements */
-    width: 50%; /* Width of each timeline item */
-}
-
-.timeline-item::before {
-    content: ''; /* Create a pseudo-element */
-    position: absolute; /* Position absolute to place it correctly */
-    width: 24px; /* Width of the marker */
-    height: 24px; /* Height of the marker */
-    background-color: #ff9f55; /* Color of the marker */
-    border: 4px solid #333; /* Border of the marker */
-    top: 50%; /* Position it vertically */
-    transform: translateY(-50%); /* Center it vertically */
-    border-radius: 50%; /* Make it a circle */
-    z-index: 1; /* Ensure it's above other elements */
-}
-
-.left {
-    right: 7%; /* Position timeline item to the left */
-}
-
-.right {
-    left: 50%; /* Position timeline item to the right */
-}
-
-.left::before {
-    right: -13px; /* Adjust marker position for left-aligned items */
-}
-
-.right::before {
-    left: -15px; /* Adjust marker position for right-aligned items */
-}
 
 .content {
     padding: 15px 25px; /* Padding for timeline item content */
@@ -172,7 +111,7 @@ a:hover {
 /* =========================
    Notes and Projects Styles
    ========================= */
-#notes-container, #projects-container {
+ #projects-container {
     width: 40%; /* Set width for notes and projects containers */
     margin: 0 auto; /* Center the containers */
     background: #ffffff; /* Background color */
@@ -180,7 +119,7 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
-.notes, .projects {
+ .projects {
     border-bottom: 1px solid #ddd; /* Bottom border for notes and projects */
     padding: 0; /* Change this line */
     line-height: 1; /* Add this line */
