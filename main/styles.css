@@ -32,6 +32,10 @@
     color: #ffcc00; /* Change text color on hover to a bright yellow */
 }
 
+/* Add this to remove the focus outline */
+.theme-toggle-button:focus {
+    outline: none; /* Remove the default focus outline */
+}
 
 .light-mode .theme-toggle-button {
   
