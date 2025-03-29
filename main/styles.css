@@ -20,19 +20,21 @@
    ========================= */
 .theme-toggle-button {
     cursor: pointer; /* Set cursor to pointer */
-    background: rgba(80, 80, 80, 0.5); /* Background color of the button */
-    color: #9a9a9a; /* Text color of the button */
-    font-size: 14px; /* Font size of the button */
-    border: none; /* Remove border */
-    padding: 5px 10px; /* Padding for better spacing */
-    border-radius: 3px; /* Rounded corners */
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
-    transition: background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    background: transparent; /* Make background transparent */
+    color: #c7c6c6; /* Text color of the button */
+    font-size: 50px; /* Adjust font size for the icon */
+    border: 0; /* Ensure no border is applied */
+    padding: 5px; /* Adjust padding for better click area */
+    transition: color 0.3s; /* Smooth transition for text color */
 }
 
+.theme-toggle-button:hover {
+    color: #ffcc00; /* Change text color on hover to a bright yellow */
+}
+
+
 .light-mode .theme-toggle-button {
-    background: rgba(223, 222, 222, 0.5); /* Background color of the button in light mode */
+  
     color: #333333; /* Text color of the button in light mode */
 }
 
@@ -55,8 +57,8 @@ li::before {
 }
 
 .custom-bullets::before {
-    content: "\2013"; /* Use en dash (–) as bullet points */
-    margin-right: 0.5em; /* Add some space between the en dash and the text */
+    content: ""; /* Remove the en dash (–) */
+    margin-right: 0.5em; /* Add some space between the bullet and the text */
 }
 
 /* =========================
