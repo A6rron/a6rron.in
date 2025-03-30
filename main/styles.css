@@ -20,16 +20,37 @@ body {
    ========================= */
 .theme-toggle-button {
     cursor: pointer; /* Set cursor to pointer */
-    background: transparent; /* Make background transparent */
+    background: transparent !important; /* Make background transparent, ensure override */
     color: #c7c6c6; /* Text color of the button */
     font-size: 50px; /* Adjust font size for the icon */
-    border: 0; /* Ensure no border is applied */
+    border: none !important; /* Ensure no border is applied */
     padding: 5px; /* Adjust padding for better click area */
     transition: color 0.3s; /* Smooth transition for text color */
+    outline: none !important; /* Remove default outline, ensure override */
+    box-shadow: none !important; /* Ensure no box shadow is applied, ensure override */
+    appearance: none; /* Remove default button styling */
+    -webkit-appearance: none; /* Add vendor prefix for appearance */
+    -moz-appearance: none; /* Add vendor prefix for appearance */
+    -webkit-tap-highlight-color: transparent !important; /* Remove tap highlight on mobile */
+}
+
+.theme-toggle-button:focus,
+.theme-toggle-button:focus-visible,
+.theme-toggle-button:active { /* Apply to focus, focus-visible, and active states */
+    outline: none !important; /* Ensure no outline on focus/active */
+    box-shadow: none !important; /* Ensure no box shadow on focus/active */
+    border: none !important; /* Ensure no border on focus/active */
+    background-color: transparent !important; /* Ensure background remains transparent */
+    -webkit-tap-highlight-color: transparent !important; /* Also remove tap highlight in these states */
 }
 
 .theme-toggle-button:hover {
     color: #ffcc00; /* Change text color on hover to a bright yellow */
+    background-color: transparent !important; /* Ensure background remains transparent on hover */
+    outline: none !important; /* Ensure no outline on hover */
+    box-shadow: none !important; /* Ensure no box shadow on hover */
+    border: none !important; /* Ensure no border on hover */
+    -webkit-tap-highlight-color: transparent !important; /* Also remove tap highlight on hover (though less relevant) */
 }
 
 .light-mode .theme-toggle-button {
@@ -94,9 +115,6 @@ a {
 a:hover {
     border-bottom: 0; /* Remove underline on hover */
 }
-
-
-
 
 .content {
     padding: 15px 25px; /* Padding for timeline item content */
