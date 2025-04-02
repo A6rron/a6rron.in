@@ -14,7 +14,6 @@ body {
     flex-direction: column; /* Stack children vertically */
     min-height: 100vh; /* Ensure body takes full height */
 }
-
 /* =========================
    Button Styles
    ========================= */
@@ -189,7 +188,7 @@ em {
 .section h2 {
     font-size: 15px;
     margin-bottom: 10px; /* Reduced space below heading */
-    font-weight: 600;
+  
 }
 
 .section ul {
@@ -207,33 +206,6 @@ em {
     content: "•"; /* Bullet point */
     margin-right: 10px;
     color: #666;
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Space between checkbox items */
-}
-
-.checkbox {
-    width: 18px;
-    height: 18px;
-    border: 2px solid #333;
-    margin-right: 10px;
-    display: inline-block;
-}
-
-.checkbox.checked {
-    background-color: #f0f0f0;
-    position: relative;
-}
-
-.checkbox.checked::after {
-    content: "✓";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .favorites-item {
@@ -258,3 +230,18 @@ em {
     padding: 15px 0;
     border-top: 1px solid #eee;
 }
+
+.event-gallery {
+    display: flex; /* Use flexbox for layout */
+    gap: 10px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+}
+
+.event-image {
+    width: 200px; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+
