@@ -173,3 +173,85 @@ em {
     mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 14 L14 7 M14 7 L10 7 M14 7 L14 11" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
     background-size: contain;
 }
+
+.archive-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.section li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section li::before {
+    content: "•"; /* Bullet point */
+    margin-right: 10px;
+    color: #666;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.checkbox.checked {
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.checkbox.checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.favorites-item {
+    margin-bottom: 15px;
+}
+
+.favorites-label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.note-box {
+    background-color: #fffaeb;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.x-post {
+    margin-top: 10px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
