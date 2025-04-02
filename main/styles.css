@@ -240,8 +240,7 @@ em {
 .event-image {
     width: 200px; /* Set a fixed width for images */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 6px; /* Optional: rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    border-radius: 3px; /* Optional: rounded corners */
 }
 
 
