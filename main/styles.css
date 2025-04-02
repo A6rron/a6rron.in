@@ -177,17 +177,18 @@ em {
 .archive-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    margin: 0 auto;
-    padding: 20px;
+
+
+    gap: 40px;
 }
 
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Space between sections */
 }
 
 .section h2 {
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Reduced space below heading */
     font-weight: 600;
 }
 
@@ -199,7 +200,7 @@ em {
 .section li {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Space between list items */
 }
 
 .section li::before {
@@ -211,7 +212,7 @@ em {
 .checkbox-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Space between checkbox items */
 }
 
 .checkbox {
@@ -245,9 +246,11 @@ em {
 }
 
 .note-box {
-    background-color: #fffaeb;
-    padding: 15px;
-    border-radius: 4px;
+
+    padding: 15px; /* Padding for notes */
+    border-radius: 4px; /* Rounded corners */
+    max-width: 300px; /* Set a maximum width */
+    margin-bottom: 20px; /* Space below the note box */
 }
 
 .x-post {
