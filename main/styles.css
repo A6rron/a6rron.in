@@ -6,7 +6,7 @@
     background: #000000; /* Background color */
     color: #c7c6c6; /* Text color */
     font-family: monospace; /* Font family */
-    font-size: 18px; /* Reduced font size for zooming out */
+    font-size: 14px; /* Reduced font size for zooming out */
     line-height: 2.0; /* Line height */
     max-width: 95%; /* Increased max-width for more screen space */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
