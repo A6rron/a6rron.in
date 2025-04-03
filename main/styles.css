@@ -238,7 +238,7 @@ em {
 }
 
 .event-image {
-    width: 200px; /* Set a fixed width for images */
+    width: 250px; /* Set a fixed width for images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 3px; /* Optional: rounded corners */
 }
