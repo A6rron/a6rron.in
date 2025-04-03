@@ -3,6 +3,7 @@
    ========================= */
    body {
     margin: 5% auto; /* Center the content vertically */
+    margin-left: 20px; 
     background: #000000; /* Background color */
     color: #c7c6c6; /* Text color */
     font-family: monospace; /* Font family */
