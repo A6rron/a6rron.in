@@ -2,7 +2,7 @@
    Global Styles
    ========================= */
 body {
-    margin: 5% auto; /* Center the content vertically */
+    margin: 10% auto; /* Center the content vertically */
     background: #000000; /* Background color */
     color: #c7c6c6; /* Text color */
     font-family: monospace; /* Font family */
@@ -15,12 +15,7 @@ body {
     min-height: 100vh; /* Ensure body takes full height */
 }
 
-.section ul li a {
-    margin-left: 3px; /* Add space before the link */
-}
-/* =========================
-   Button Styles
-   ========================= */
+
 .theme-toggle-button {
     cursor: pointer; /* Set cursor to pointer */
     background: transparent !important; /* Make background transparent, ensure override */
@@ -198,6 +193,7 @@ em {
 .section ul {
     list-style-type: none;
     padding-left: 0;
+ 
 }
 
 .section li {
@@ -209,7 +205,7 @@ em {
 .section li::before {
     content: "•"; /* Bullet point */
     margin-right: 10px;
-    margin-left: -10px;
+
     color: #666;
 }
 
