@@ -16,7 +16,7 @@ body {
 }
 
 .section ul li a {
-    margin-left: 5px; /* Add space before the link */
+    margin-left: 3px; /* Add space before the link */
 }
 /* =========================
    Button Styles
@@ -209,6 +209,7 @@ em {
 .section li::before {
     content: "•"; /* Bullet point */
     margin-right: 10px;
+    margin-left: -10px;
     color: #666;
 }
 
