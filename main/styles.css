@@ -1,10 +1,10 @@
 /* =========================
    Global Styles
    ========================= */
-   body {
+body {
     margin: 5% auto; /* Center the content vertically */
-    margin-left: 20px; 
-    background: #000000; /* Background color */
+    margin-left: 20px; /* Add left margin */
+    background: #000; /* Background color */
     color: #c7c6c6; /* Text color */
     font-family: monospace; /* Font family */
     font-size: 15px; /* Base font size */
@@ -24,18 +24,13 @@
    ========================= */
 .theme-toggle-button {
     cursor: pointer; /* Set cursor to pointer */
-    background: transparent !important; /* Make background transparent, ensure override */
+    background: transparent; /* Make background transparent */
     color: #c7c6c6; /* Text color of the button */
     font-size: 50px; /* Adjust font size for the icon */
-    border: none !important; /* Ensure no border is applied */
+    border: none; /* Ensure no border is applied */
     padding: 5px; /* Adjust padding for better click area */
     transition: color 0.3s; /* Smooth transition for text color */
-    outline: none !important; /* Remove default outline, ensure override */
-    box-shadow: none !important; /* Ensure no box shadow is applied, ensure override */
-    appearance: none; /* Remove default button styling */
-    -webkit-appearance: none; /* Add vendor prefix for appearance */
-    -moz-appearance: none; /* Add vendor prefix for appearance */
-    -webkit-tap-highlight-color: transparent !important; /* Remove tap highlight on mobile */
+    outline: none; /* Remove default outline */
 }
 
 .theme-toggle-button:focus,
@@ -88,8 +83,8 @@ body.light-mode {
 }
 
 .light-mode a {
-    border-bottom: 1px solid #444444; /* Add underline effect in light mode */
-    color: #444444; /* Link color in light mode */
+    border-bottom: 1px solid #444; /* Add underline effect in light mode */
+    color: #444; /* Link color in light mode */
 }
 
 .light-mode a:hover {
@@ -193,12 +188,11 @@ em {
 .section h2 {
     font-size: 15px;
     margin-bottom: 10px; /* Reduced space below heading */
-  
 }
 
 .section ul {
-    list-style-type: none;
-    padding-left: 0;
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove padding */
 }
 
 .section li {
@@ -224,8 +218,6 @@ em {
 }
 
 .note-box {
-
- 
     border-radius: 4px; /* Rounded corners */
     max-width: 300px; /* Set a maximum width */
     margin-bottom: 20px; /* Space below the note box */
