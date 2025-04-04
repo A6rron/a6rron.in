@@ -1,17 +1,16 @@
 [
     {
-        "title": "Snake-game",
+        "title": "opsa",
+        "description": "what is opsa???",
+        "link": "https://whatisopsa.a6rron.in/"
+    },
+
+    {
+        "title": "2d-snake",
         "description": "Simple Snake game implemented using HTML, CSS, and JavaScript.",
         "link": "https://snake.a6rron.in"
     },
     
-    
-    {
-        "title": "rgb",
-        "description": "",
-        "link": ""
-    },
-
 
     {
         "title": "rvrb",
