@@ -10,13 +10,19 @@
 
 // Function to toggle theme and store preference
 function toggleTheme() {
-    var element = document.body;
-    element.classList.toggle('light-mode');
-    if (element.classList.contains('light-mode')) {
-        localStorage.setItem('theme', 'light');
+    const body = document.body;
+    const blockquote = document.querySelector('blockquote.twitter-tweet');
+
+    // Toggle the light-mode class
+    body.classList.toggle('light-mode');
+
+    // Set the data-theme attribute based on the current theme
+    if (body.classList.contains('light-mode')) {
+        blockquote.setAttribute('data-theme', 'light'); // Set to light theme
     } else {
-        localStorage.setItem('theme', 'dark');
+        blockquote.setAttribute('data-theme', 'dark'); // Set to dark theme
     }
+
 }
 
 // Apply the theme when the page loads (optional, as a safety measure)
